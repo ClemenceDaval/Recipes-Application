@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Recipe from 'src/components/Recipe';
+import { withRouter } from 'react-router-dom';
 
 import { findRecipe } from 'src/selectors/recipes';
 
