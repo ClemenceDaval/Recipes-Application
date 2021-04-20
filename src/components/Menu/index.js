@@ -4,25 +4,29 @@ import { NavLink } from 'react-router-dom';
 
 import './style.scss';
 
-const Menu = ({ recipes }) => {
-  // eslint-disable-next-line no-console
-  console.log(recipes);
-
-  return (
-    <nav className="menu">
-      <NavLink className="menu-link" activeClassName="menu-link--active" exact to="/">
-        Accueil
+const Menu = ({ recipes }) => (
+  <nav className="menu">
+    <NavLink
+      className="menu-link"
+      to="/"
+      exact
+      activeClassName="menu-link--active"
+    >
+      Accueil
+    </NavLink>
+    {recipes.map((recipe) => (
+      <NavLink
+        key={recipe.id}
+        className="menu-link"
+        to={`/recipe/${recipe.slug}`}
+        exact
+        activeClassName="menu-link--active"
+      >
+        {recipe.title}
       </NavLink>
-      {
-        recipes.map((recipe) => (
-          <NavLink key={recipe.id} className="menu-link" activeClassName="menu-link--active" exact to={`/recipe/${recipe.slug}`}>
-            {recipe.title}
-          </NavLink>
-        ))
-      }
-    </nav>
-  );
-};
+    ))}
+  </nav>
+);
 
 Menu.propTypes = {
   recipes: PropTypes.arrayOf(
