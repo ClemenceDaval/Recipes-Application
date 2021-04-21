@@ -1,8 +1,7 @@
-import data from 'src/data';
 import { SAVE_RECIPES } from '../actions/recipes';
 
 export const initialState = {
-  list: data,
+  list: [],
 };
 
 const reducer = (state = initialState, action = {}) => {
