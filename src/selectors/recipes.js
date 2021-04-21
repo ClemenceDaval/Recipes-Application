@@ -13,3 +13,13 @@ export function findRecipe(recipes, searchedSlug) {
   });
   return recipe;
 }
+
+export function getTitleByRecipesNumber(recipeNumber) {
+  if (recipeNumber === 1) {
+    return 'Découvrez notre première recette';
+  }
+  if (recipeNumber > 1) {
+    return 'Découvrez nos recettes';
+  }
+  return 'Aucune recette pour le moment';
+}
