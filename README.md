@@ -8,8 +8,8 @@ View a list of recipes and access to the details of a recipe
 Connect to a private space and memorize your favorite recipes
 
 ## Technologies
-React
-Redux
+React  
+Redux  
 Routing with React Router Dom
 
 ## Tests
